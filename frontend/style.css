@@ -1,0 +1,191 @@
+/* General Page Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fffaf2;
+  color: #333;
+}
+
+/* Navigation Bar */
+header {
+  background-color: #e87524;
+  color: white;
+  padding: 20px 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 26px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 25px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ffe0b2;
+}
+
+/* Home Section */
+#home {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #fff0dc;
+}
+
+#home h2 {
+  font-size: 36px;
+  color: #b94f0c;
+  margin-bottom: 20px;
+}
+
+#home p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* Common Button Styling */
+button {
+  background-color: #e87524;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #b94f0c;
+  transform: scale(1.04);
+}
+
+/* Menu Section */
+#menu {
+  padding: 50px 40px;
+  text-align: center;
+}
+
+#menu h2,
+#cart h2 {
+  font-size: 30px;
+  color: #b94f0c;
+  margin-bottom: 35px;
+}
+
+/* Food Cards Layout */
+.menu-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* Individual Food Card */
+.food-item {
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.food-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.food-item h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.food-item p {
+  font-size: 17px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Cart Section */
+#cart {
+  background-color: #fff0dc;
+  padding: 50px 40px;
+  text-align: center;
+}
+
+#cart-items {
+  max-width: 600px;
+  margin: auto;
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  min-height: 60px;
+}
+
+#cart h3 {
+  margin: 25px 0;
+  font-size: 22px;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 900px) {
+  .menu-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header {
+    padding: 20px;
+  }
+}
+
+/* Responsive Design for Mobile Phones */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav a {
+    margin: 0 8px;
+  }
+
+  .menu-container {
+    grid-template-columns: 1fr;
+  }
+
+  #home h2 {
+    font-size: 28px;
+  }
+
+  #menu,
+  #cart {
+    padding: 35px 20px;
+  }
+}
